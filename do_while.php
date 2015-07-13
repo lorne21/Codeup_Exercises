@@ -1,9 +1,9 @@
 <?php
 
-$a = 100;
-while ($a >= -10){
-	echo "$a is greater than or equal to -10\n";
-	$a -= 5; 
+$a = 2;
+while ($a <= 1000000){
+	echo "$a is less than or equal to 1000000\n";
+	$a *= $a; 
 }
 
 ?>
