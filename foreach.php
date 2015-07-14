@@ -25,11 +25,12 @@ foreach($things as $scales){
 }
 
 foreach($things as $vals){
-	echo "$vals" . PHP_EOL; 
 	if (is_array($vals)){
 		foreach($vals as $innerarray){
 			echo "$innerarray" . PHP_EOL; 
 		}
+	} else {
+		echo "$vals" . PHP_EOL; 
 	}
 }
 
