@@ -9,7 +9,7 @@ function inspect($a){
 		if (count($a) == 0){
 			echo "The value is an empty " . $type . PHP_EOL;
 		} else {
-			echo "The value is an " . $type . PHP_EOL;
+			echo "The value is an " . $type . ": " . implode("," , $a) . PHP_EOL;
 		}
 	} else if (is_bool($a)) {
 		if ($a == 0){
@@ -17,6 +17,8 @@ function inspect($a){
 		} else {
 			echo "The value is True" . PHP_EOL;
 		}
+	} else if (is_string($a) && strlen($a) == 0){
+		echo "The value is an empty " . $type . PHP_EOL; 
 	} else {
 		echo $a . " is a " . $type . PHP_EOL;
 	}
@@ -69,4 +71,5 @@ inspect($array1);
 
 echo 'Inspecting $array2' . PHP_EOL;
 inspect($array2); 
+
 
