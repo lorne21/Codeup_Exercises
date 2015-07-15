@@ -3,7 +3,23 @@
 // TODO: Create your inspect() function here
 function inspect($a){
 	$type = gettype($a); 
-	echo $a . " is a " . $type . PHP_EOL; 
+	if (is_null($a)){
+		echo "The value is " . $type . PHP_EOL;  
+	} else if (is_array($a)) {
+		if (count($a) == 0){
+			echo "The value is an empty " . $type . PHP_EOL;
+		} else {
+			echo "The value is an " . $type . PHP_EOL;
+		}
+	} else if (is_bool($a)) {
+		if ($a == 0){
+			echo "The value is False" . PHP_EOL;
+		} else {
+			echo "The value is True" . PHP_EOL;
+		}
+	} else {
+		echo $a . " is a " . $type . PHP_EOL;
+	}
 }
 
 // Do not mofify these variables!
