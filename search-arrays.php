@@ -14,8 +14,8 @@ function getName($person, $names){
 	}
 }
 
-// echo getName('Tina', $names);
-// echo getName('Bob', $names); 
+echo getName('Tina', $names);
+echo getName('Bob', $names); 
 
 // this function compares the two arrays and returns the values in common
 function compare($names, $compare){

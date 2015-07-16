@@ -46,11 +46,12 @@ $companies = [
 ];
 
 // output companies in current form
-// print_r($companies);
+print_r($companies);
 
 // // sort companies by company name and output results
 ksort($companies);
 print_r($companies);
+
 // sort people in company alphabetically. need foreach loop to reassign inner array. output result
 foreach ($companies as $key => $people) {
     echo $key . PHP_EOL;
@@ -58,10 +59,8 @@ foreach ($companies as $key => $people) {
     print_r($people) . PHP_EOL; 
 }
 // sort companies from biggest to smallest
-function biggest($a, $b){
-    return (count($b) - count($a));
-}
-uasort($companies, 'biggest');
 
+arsort($companies);
 print_r($companies);
+
 ?>
