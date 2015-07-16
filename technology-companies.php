@@ -46,7 +46,7 @@ $companies = [
 ];
 
 // output companies in current form
-print_r($companies);
+// print_r($companies);
 
 // // sort companies by company name and output results
 ksort($companies);
@@ -61,7 +61,7 @@ foreach ($companies as $key => $people) {
 function biggest($a, $b){
     return (count($b) - count($a));
 }
-usort($companies, 'biggest');
+uasort($companies, 'biggest');
 
 print_r($companies);
 ?>
