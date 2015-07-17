@@ -33,7 +33,7 @@ function findNumber(){
 			$theNumber++;
 		}
 	}
-	echo $theNumber;
+	echo $theNumber . PHP_EOL;
 }
 
 findNumber();
