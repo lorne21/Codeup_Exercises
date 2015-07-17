@@ -3,7 +3,7 @@
 // Converts array into list n1, n2, ..., and n3
 function humanizedList($array, $sort = false) {
 	if ($sort){
-		asort($array);
+		sort($array);
 	}
 	$lastItem = array_pop($array);
 	$newString = implode(', ', $array);
@@ -20,7 +20,7 @@ $physicistsArray = explode(', ', $physicistsString);
  
 
 // Humanize that list
-$famousFakePhysicists = humanizedList($physicistsArray, true);
+$famousFakePhysicists = humanizedList($physicistsArray);
 // Output sentence
 echo "Some of the most famous fictional theoretical physicists are {$famousFakePhysicists}.\n";
 
