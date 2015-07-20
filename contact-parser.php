@@ -8,15 +8,13 @@ function parseContacts($filename) {
     fclose($handle);
     $firstLevel = explode("\n", $contents);
     $contacts = [];
-    foreach ($firstLevel as $key => $value) {
-    	$inner['Name'] = explode ("|", $value)[0];
-    	$inner['Number'] = explode ("|", $value)[1];
-    	$inner['Number'] = phoneNumber($inner['Number']); 
-    	array_push($contacts, $inner);
+    foreach ($firstLevel as $value) {
+    	$fields = ['Name', 'Number']; 
+    	$secondLevel = array_combine ($fields, explode ("|", $value));
+    	$secondLevel['Number'] = phoneNumber($secondLevel['Number']); 
+    	array_push($contacts, $secondLevel);
+
     }	
-
-
-    // todo - read file and parse contacts
 
     return $contacts;
 }
