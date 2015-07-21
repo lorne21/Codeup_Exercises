@@ -25,3 +25,16 @@ function phoneNumber($someNumber){
 }
 
 var_dump(parseContacts('contacts.txt'));
+
+function addName(){
+
+	$handle = fopen('contacts.txt', 'a'); 
+
+	$newName = "Lorne Barfield|4159127650" . PHP_EOL; 
+
+	fwrite ($handle, $newName); 
+
+	fclose($handle); 
+}
+
+addName();

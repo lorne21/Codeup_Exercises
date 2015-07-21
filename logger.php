@@ -18,19 +18,17 @@ function logMessage($logLevel, $message){
 // logMessage("INFO", "This is an info message.") . PHP_EOL;
 // logMessage("ERROR", "This is an info message.") . PHP_EOL;
 
-function logInfo(){
-	$message = "The crows seemed to be calling his name, thought Caw."; 
-	logMessage("INFO", $message); 
+function logInfo($message){ 
+	return logMessage("INFO", $message); 
 }
 
-// logInfo(); 
+logInfo("The crows seemed to be calling his name, thought Caw."); 
 
-function logError(){
-	$message = "You shall not PASS!!!"; 
-	logMessage("ERROR", $message);
+function logError(){ 
+	return logMessage("ERROR", $message);
 }
 
-// logError();
+logError("You shall not PASS!!!");
 
-echo time();
+
 ?>
