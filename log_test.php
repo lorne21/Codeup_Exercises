@@ -2,13 +2,9 @@
 
 require_once 'Log.php';
 
-$newlog = new Log();
+$newlog = new Log('cli');
 
-$newlog->date = date("Y-m-d", time());
-
-$newlog->filename = 'log-' . $newlog->date . '.log';
-
-$newlog->logMessage("INFO", "This is an info message.") . PHP_EOL;
+$newlog->logMessage("INFO", "This is an info message.");
 
 $newlog->info("The crows seemed to be calling his name, thought Caw.");
 
